@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Sitio web del proyecto de estadística" />
+    <meta name="author"
+        content="Jeam Henry Romero Aguilar, Franz Isamel Ludeña Arevalo, Rodolfo Alexander Gallo Guarnizo, Francisco Antonio Chamba Diaz" />
+    <title>Proyecto de Estadística</title>
+
+    <link rel="stylesheet" href="/Css/styles.css" />
+
+    <link rel="icon" href="favicon.ico" />
+</head>
+
+<body>
+    <header>
+        <div class="logoHeader">
+            <a href="inicio"><img src="/img/logoWeb.png" alt=""></a>
+        </div>
+
+        <nav>
+            <a href="#SobreNosotros">SobreNosotros</a>
+            
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">
+            <div class="info item">
+                <div class="logo">
+                    <img src="/img/logoWeb.png" alt="Logo del Proyecto de Estadística">
+                </div>
+                <div class="desc">
+                    <p>Web de analisis de datos centrada en examinar el nivel de nacimientos de niños vivos en el
+                        Ecuador desde el año 2014 hasta 2024, a través de la revisión de información disponible en
+                        plataformas y páginas web oficiales, con el propósito de identificar la evolución de esta
+                        tendencia y proyectar posibles valores para el año 2030.</p>
+                </div>
+                <div class="buttonView">
+                    <button>
+                        <a href="inicio">Ver Estadísticas</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="images item">
+                <div class="imageContainer">
+                    <img class="firstImage" src="/img/analist.png" alt="Imagen 1">
+                </div>
+                <div class="imageContainer">
+                    <img class="secondImage" src="/img/datos.png" alt="Imagen 2">
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Proyecto de Estadística</p>
+    </footer>
+
+    <script>
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>
