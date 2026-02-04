@@ -53,8 +53,6 @@ header {
 .logoHeader img:hover {
     transform: scale(1.1);
     transition: 0.3s ease;
-    /* sdf */
-
 }
 
 header nav {
@@ -82,24 +80,35 @@ header nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
+/*     align-items: center;
+ */    gap: 20px;
 }
 
 .content .item {
+    
     flex-grow: 1;
-    padding: 10px;
-}
+    padding: 20px 20px 20px 30px;}
 
 .info {
+    transition: 0.5s ease;
+    border-radius: 10px;
+    background-color: #fffaf7;
     margin: 0 10% 0 10%;
-    max-width: 100%;
+    max-width: 80%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-left: 5px solid #003366;
 }
+
+.info:hover {
+    transition: 0.5s ease;
+    transform: scale(1.01);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
 
 .logoU img {
     height: 200px;
@@ -123,7 +132,6 @@ header nav a:hover {
     margin-left: 8%;
     margin-top: 10px;
     margin-bottom: 20px;
-    font-size: 18px;
     color: #333;
 }
 
@@ -303,7 +311,6 @@ footer {
     white-space: nowrap;
 }
 
-/* ===== BADGES SUPER COMPACTOS ===== */
 .compact-badges {
     display: flex;
     flex-wrap: wrap;
@@ -327,27 +334,23 @@ footer {
     text-overflow: ellipsis;
 }
 
-/* Versión mini para badges muy largos */
 .compact-badge.long {
     font-size: 0.65rem;
     padding: 1px 5px;
 }
 
-/* Para badges con 2 palabras, hacemos que se vea mejor */
 .compact-badge.multi-word {
     font-size: 0.65rem;
     padding: 1px 4px;
     letter-spacing: -0.2px;
 }
 
-/* ===== BADGES EN LÍNEA (uno al lado del otro) ===== */
 .compact-badge.inline {
     display: inline-block;
     margin-right: 3px;
     margin-bottom: 3px;
 }
 
-/* ===== VERSIÓN INLINE-BLOCK PARA MÁS COMPACTO ===== */
 .compact-badge.inline-compact {
     display: inline-block;
     background: linear-gradient(135deg, #ffb347, #ffcc33);
@@ -363,14 +366,12 @@ footer {
     vertical-align: middle;
 }
 
-/* Opción: Badges con color más suave */
 .compact-badge.soft {
     background: #fff8e1;
     color: #5d4037;
     border: 1px solid #ffd54f;
 }
 
-/* ===== VERSIÓN ICONOS + TEXTO ===== */
 .badge.with-icon {
     display: inline-flex;
     align-items: center;
@@ -382,7 +383,6 @@ footer {
     font-size: 0.6rem;
 }
 
-/* ===== AJUSTES PARA TEXTO LARGO ===== */
 .badge.text-long {
     max-width: 45%;
     overflow: hidden;
@@ -390,7 +390,6 @@ footer {
     white-space: nowrap;
 }
 
-/* ===== GRID COMPACTO PARA BADGES ===== */
 .badges.grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -407,7 +406,6 @@ footer {
     white-space: nowrap;
 }
 
-/* Para badges con 2 palabras, hacemos que se vea mejor */
 .badge.multi-word {
     font-size: 0.65rem;
     padding: 1px 4px;
@@ -438,6 +436,8 @@ footer {
     opacity: 1;
 }
 
+
+/* diseño responsivo */
 
 @media (max-width: 1200px) {
     .cardsContainer {
@@ -493,10 +493,6 @@ footer {
 .card:nth-child(2) { animation-delay: 0.1s; }
 .card:nth-child(3) { animation-delay: 0.2s; }
 .card:nth-child(4) { animation-delay: 0.3s; }
-
-
-
-
 
 /*Media query para un telefono*/
 @media (max-width: 1340px) {

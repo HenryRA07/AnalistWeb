@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Sitio web del proyecto de estadística" />
+    <meta name="author"
+        content="Jeam Henry Romero Aguilar, Franz Isamel Ludeña Arevalo, Rodolfo Alexander Gallo Guarnizo, Francisco Antonio Chamba Diaz" />
+    <title>Proyecto de Estadística - </title>
+
+    <link rel="stylesheet" href="Css/stylesMetodologia.css" />
+
+    <link rel="icon" href="img/logoWeb.ico" />
+</head>
+
+<body>
+    <header>
+        <div class="logoHeader">
+            <a href="index.html"><img src="img/logoWeb.png" alt="Logo del sitio web"></a>
+        </div>
+
+        <nav>
+            <a href="index.html"> Inicio </a>
+            <a href="sobreNosotros.html">Sobre Nosotros</a>
+            <a href="metodologia.html">Metodología</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="content">
+
+            <div class="info item">
+                <h3 class="step-number">Fase 1: Recolección</h3>
+                <h4>Minería de Datos Oficiales</h4>
+                <p>El primer paso fue acceder a las bases de datos del <strong>Instituto Nacional de Estadística y
+                        Censos (INEC)</strong>. Recopilamos y depuramos registros de nacimientos vivos comprendidos
+                    entre <strong>2014 y 2024</strong>, asegurando una fuente confiable y verificada.</p>
+
+
+                <div class="data-sources">
+                    <h4>Fuentes de Datos:</h4>
+                    <ul class="list">
+                        <li><a href="https://www.ecuadorencifras.gob.ec/nacidos-vivos-y-defunciones-fetales/" target="_blank" rel="noopener">INEC - Nacimientos Vivos</a></li>
+                        <li><a href="https://www.ecuadorencifras.gob.ec/estadisticas/" target="_blank" rel="noopener">INEC - Estadísticas</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <div class="info item">
+                <h3 class="step-number">Fase 2: Procesamiento</h3>
+                <h4>Análisis y Limpieza</h4>
+                <p>Utilizando hojas de cálculo, realizamos una depuración exhaustiva para eliminar datos irrelevantes.
+                    Identificamos las variables críticas para el estudio:</p>
+                <ul class="list">
+                    <li>Sexo y Edad</li>
+                    <li>Provincia de residencia</li>
+                    <li>Año de inscripción</li>
+                </ul>
+
+                <div class="imgs">
+                    <h4>Ejemplos de la depuración exhaustiva para eliminar datos irrelevantes</h4>
+
+                    <h5>Hoja de cálculo con datos crudos</h5>
+                    <img src="img/data1.png" alt="Captura de pantalla de la hoja de cálculo con datos crudos">
+
+                    <h5>Datos para la tabla de contingencia</h5>
+                    <img id="tCont" src="img/data2.png" alt="Captura de pantalla de la hoja de cálculo con datos crudos">
+
+                    <h5>Hoja de cálculo con datos crudos</h5>
+                    <img src="img/data3.png" alt="Captura de pantalla de la tabla de contingencia">
+                </div>
+                
+                <h4>Tambien realizamos el diagrama de arbol, que tiene como base datos de la tabla de contingencia (ver en la fase 3).</h4>
+
+                <div class="prob-tree-container">
+                    <h3 class="tree-title">Desglose de Probabilidad Condicional por Sexo</h3>
+                    <div class="prob-tree">
+                        <ul>
+                            <li>
+                                <a href="#" class="node-root">
+                                    <strong>Población Total</strong>
+                                    <span class="val">2,968,099</span>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="node-period">
+                                            <strong>Periodo 2014-2018 (49%)</strong>
+                                            <span class="val">1,453,480</span>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="node-leaf">
+                                                    <strong>Hombres</strong>
+                                                    <span class="count">710,388</span>
+                                                    <div class="calc">710.388 / 1.453.480</div>
+                                                    <span class="result">≈ 0.49</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="node-leaf">
+                                                    <strong>Mujeres</strong>
+                                                    <span class="count">743,092</span>
+                                                    <div class="calc">743.092 / 1.453.480</div>
+                                                    <span class="result">≈ 0.51</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="node-period">
+                                            <strong>Periodo 2019-2024 (51%)</strong>
+                                            <span class="val">1,514,619</span>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="node-leaf">
+                                                    <strong>Hombres</strong>
+                                                    <span class="count">740,898</span>
+                                                    <div class="calc">740.898 / 1.514.619</div>
+                                                    <span class="result">≈ 0.49</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="node-leaf">
+                                                    <strong>Mujeres</strong>
+                                                    <span class="count">773,721</span>
+                                                    <div class="calc">773.721 / 1.514.619</div>
+                                                    <span class="result">≈ 0.51</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="info item">
+                <h3 class="step-number">Fase 3: Modelado Estadístico</h3>
+                <h4>Matemáticas aplicadas a la Demografía</h4>
+                <p>Aplicamos medidas de <strong>tendencia central y dispersión</strong> para identificar patrones de
+                    comportamiento. Esto nos permitió no solo entender el pasado, sino generar <strong>proyecciones
+                        estadísticas hacia el 2030</strong>.</p>
+
+
+                <p>Como ejemplo tenemos la tabla de contingencia</p>
+
+                <div class="analysis-table-container">
+                    <h4 class="table-title">Tabla de Contingencia: Distribución conjunta de sexo y periodo (2014–2024)</h4>
+                    <table class="contingency-table">
+                        <thead>
+                            <tr>
+                                <th>Sexo / Periodo</th>
+                                <th>2014-2018</th>
+                                <th>2019-2024</th>
+                                
+                                <th>Total Parcial</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="row-label">Hombres</td>
+                                <td>710,388</td>
+                                <td>740,898</td>
+                                <td class="total-cell">1,451,286</td>
+                            </tr>
+                            <tr>
+                                <td class="row-label">Mujeres</td>
+                                <td>743,092</td>
+                                <td>773,721</td>
+                                
+                                <td class="total-cell">1,516,813</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="footer-row">
+                                <td>Total</td>
+                                <td>1,453,480</td>
+                                <td>1,514,619</td>
+                                
+                                <td class="grand-total">2,968,099</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="info item">
+                <h3 class="step-number">Fase 4: Visualización</h3>
+                <h4>Integración con Looker Studio</h4>
+                <p>Los datos procesados alimentan nuestro Dashboard interactivo. Pasamos de gráficos estáticos a
+                    visualizaciones dinámicas que permiten filtrar <strong>4.2 millones de registros</strong> en tiempo
+                    real.</p>
+                    <br>
+                    <div class="imgs">
+                        <img src="img/dashboard.png" alt="dashboard de lookerstudio">
+                        <img src="img/tabCont.png" alt="tabla de contingencia">
+                    </div>
+                    
+            </div>
+
+            <div class="info item">
+                <h3 class="step-number">Fase 5: Desarrollo Web</h3>
+                <h4>Arquitectura del Sitio</h4>
+                <p>Implementamos el sitio utilizando estándares web modernos y control de versiones:</p>
+                <div class="tech-stack">
+                    <span class="tech-item">HTML5</span> <span class="tech-item">CSS3</span> <span class="tech-item">JavaScript</span> <span class="tech-item">GitHub</span>
+                </div>
+                        <h4>Estructura modular con carpetas separadas para estilos (Css) y recursos (img).</h4>
+                        <br>
+                <div class="imgs"><img id="imgCompact" src="img/structure.png" alt="Estructura del proyecto"></div>
+            
+                    
+                </div>
+                
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Proyecto de Estadística</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>
