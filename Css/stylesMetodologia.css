@@ -75,6 +75,43 @@ header nav a:hover {
     font-size: 18px;
 }
 
+
+/* Media Query para dispositivos móviles y tablets */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        height: auto;           
+        padding: 15px 0;        
+    }
+
+    .logoHeader {
+        margin-bottom: 10px;    
+        padding: 0;
+    }
+
+    .logoHeader img {
+        height: 50px;           
+        margin-left: 0;         
+    }
+
+    header nav {
+        margin-right: 0;        
+        display: flex;          
+        flex-direction: column; 
+        width: 100%;            
+    }
+
+    header nav a {
+        margin: 8px 0;          
+        display: block;         
+        font-size: 16px;
+    }
+
+    header nav a:hover {
+        font-size: 16px;        
+    }
+}
+
 /*Contenido - Main*/
 .content {
     text-align: center;
@@ -410,27 +447,7 @@ header nav a:hover {
     max-width: 60%;
 }
 
-.columnsFase5 {
-    display: flex;
-    flex-direction: row; /* Cambiado de column a row */
-    flex-wrap: wrap;     /* Permite que si no caben, bajen a la siguiente fila */
-    justify-content: center;
-    align-items: stretch; /* Estira las cajas para que tengan la misma altura */
-    gap: 20px;
-}
 
-.columnsFase5 .columns-item {
-    /* Calculamos el ancho: 50% menos el espacio del gap para que quepan dos */
-    width: calc(50% - 20px); 
-    max-width: 50px; /* Opcional: para que no se estiren demasiado en pantallas enormes */
-    height: auto;
-    border: 1px solid #2d37483f;
-    box-shadow: 1px 1px 1px 1px #2d374841;
-    border-radius: 10px;
-    transition: 0.3s ease;
-    padding: 15px; /* Espaciado interno sugerido */
-    box-sizing: border-box; /* Asegura que el padding no rompa el ancho del 50% */
-}
 
 
 /*   */
